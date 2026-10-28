@@ -1,0 +1,8 @@
+﻿Nhóm chúng em nộp báo cáo tiến độ đồ án môn Bigdata với đề tài “Phát hiện các khía cạnh gây không hài lòng của khách hàng từ dữ liệu phản hồi trên các sàn thương mại điện tử tại Việt Nam”. Nhóm gồm Huỳnh Quang Sang (2001230757, 14DHTH13), Phan Đức Thể (2001230915, 14DHTH13) và Đỗ Trọng Vĩ (2001231033, 14DHTH06); giảng viên phụ trách TS. Huỳnh Thái Học.
+
+Nhóm đã khảo sát 1.300.086 review ứng dụng Google Play của Shopee, Lazada, Sendo và Tiki trong giai đoạn 2013-08/2022; triển khai HDFS, PySpark/Spark SQL, Parquet, Kafka replay, Structured Streaming, Airflow và sản phẩm ReviewLens. Kết quả sau làm sạch có 1.299.873 review, 74 record cách ly và 139 bản sao ID đã loại. Báo cáo kèm kiến trúc, mã nguồn tham chiếu, số liệu/log minh chứng, khó khăn, phần chưa hoàn thành và kế hoạch phân công cân bằng cho ba thành viên trong năm tuần.
+
+Minh chứng được dẫn theo mốc thực nghiệm 12/10 và đối soát bổ sung 15/10/2026; không coi ngày tổng hợp báo cáo là một lần chạy mới. Phần khía cạnh hiện là baseline theo luật, chưa có nhãn người đọc để báo cáo độ chính xác.
+
+Mã nguồn, hướng dẫn cài đặt/chạy và minh chứng: https://github.com/sangpm2005/DA_BIGDATA
+Tệp đính kèm: 01_Bao_cao_tien_do_Bigdata.pdf.

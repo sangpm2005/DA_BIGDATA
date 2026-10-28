@@ -19,8 +19,8 @@ __pycache__/
 !evidence/verified_20261028/**/*.csv
 !evidence/verified_20261028/logs/
 !evidence/verified_20261028/**/*.log
-submission/
-reports/
+/submission/
+/reports/
 evidence/verified_*/private/
 tmp/
 

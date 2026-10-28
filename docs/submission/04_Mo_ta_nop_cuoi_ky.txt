@@ -1,0 +1,8 @@
+﻿Nhóm chúng em nộp báo cáo cuối kỳ môn Bigdata với đề tài “Phát hiện các khía cạnh gây không hài lòng của khách hàng từ dữ liệu phản hồi trên các sàn thương mại điện tử tại Việt Nam”. Thành viên: 2001230757 - Huỳnh Quang Sang - 14DHTH13; 2001230915 - Phan Đức Thể - 14DHTH13; 2001231033 - Đỗ Trọng Vĩ - 14DHTH06. Giảng viên: TS. Huỳnh Thái Học.
+
+Đồ án triển khai luồng CSV - HDFS - Spark/Spark SQL - Parquet - phân tích khía cạnh và K-Means - Kafka/Structured Streaming - Airflow, cùng sản phẩm ReviewLens dùng kết quả đầu ra của pipeline. Nguồn có 1.300.086 review; processed có 1.299.873 review/khóa duy nhất. Thử nghiệm replay giữ 1.000 review duy nhất trên HDFS; đối soát cube kiểm tra 1.910 nhóm x 9 số đếm với toàn chỉ mục. Báo cáo gồm bài toán, schema/quy mô dữ liệu, thiết kế, source và lệnh chạy tham chiếu, log/kết quả kiểm chứng, biểu đồ, ảnh sản phẩm, nhật ký lỗi và phân công năm tuần.
+
+Mã nguồn và README tái lập: https://github.com/sangpm2005/DA_BIGDATA
+Minh chứng trên repository: evidence/verified_20261028. CSV gốc, index lớn, mật khẩu, API key và token không đưa lên Git. Repository được khởi tạo khi đóng gói nộp bài; không có lịch sử commit hồi tố của giai đoạn triển khai trước đó.
+
+Phạm vi là review ứng dụng Google Play lịch sử đến 08/2022; sao thấp là chỉ báo thay thế và khía cạnh được đề cập chưa xác thực cảm xúc tiêu cực. Tệp đính kèm: 02_Bao_cao_cuoi_ky_Bigdata.pdf.
