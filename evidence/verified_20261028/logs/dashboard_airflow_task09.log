@@ -1,0 +1,60 @@
+[2026-10-12T05:12:48.254+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/***/dags
+[2026-10-12T05:12:48.481+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ecommerce_dissatisfaction_pipeline.09_verify_completion validation_20261012 [success]>
+[2026-10-12T05:12:48.487+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ecommerce_dissatisfaction_pipeline.09_verify_completion validation_20261012 [success]>
+[2026-10-12T05:12:48.488+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2026-10-12T05:12:48.491+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): 09_verify_completion> on 2026-10-11 20:04:43+00:00
+[2026-10-12T05:12:48.740+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ecommerce_dissatisfaction_pipeline' AIRFLOW_CTX_TASK_ID='09_verify_completion' AIRFLOW_CTX_EXECUTION_DATE='2026-10-11T20:04:43+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='validation_20261012'
+[2026-10-12T05:12:48.743+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-10-12T05:12:48.782+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2026-10-12T05:12:48.784+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'python /workspace/scripts/verify_outputs.py --require-stream && spark-submit --master spark://spark-master:7077 --driver-memory 2g --executor-memory 1g /workspace/jobs/validate_persisted.py && python /workspace/scripts/validate_dashboard.py --outputs /exports']
+[2026-10-12T05:12:48.796+0000] {subprocess.py:99} INFO - Output:
+[2026-10-12T05:12:49.237+0000] {subprocess.py:106} INFO - {"verification": "passed", "clean_rows": 1299873, "stream_checked": true}
+[2026-10-12T05:12:53.912+0000] {subprocess.py:106} INFO - 26/10/12 05:12:53 INFO SparkContext: Running Spark version 3.5.7
+[2026-10-12T05:12:53.917+0000] {subprocess.py:106} INFO - 26/10/12 05:12:53 INFO SparkContext: OS info Linux, 6.6.114.1-microsoft-standard-WSL2, amd64
+[2026-10-12T05:12:53.917+0000] {subprocess.py:106} INFO - 26/10/12 05:12:53 INFO SparkContext: Java version 11.0.32.1
+[2026-10-12T05:12:53.990+0000] {subprocess.py:106} INFO - 26/10/12 05:12:53 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-10-12T05:12:54.105+0000] {subprocess.py:106} INFO - 26/10/12 05:12:54 INFO ResourceUtils: ==============================================================
+[2026-10-12T05:12:54.107+0000] {subprocess.py:106} INFO - 26/10/12 05:12:54 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2026-10-12T05:12:54.107+0000] {subprocess.py:106} INFO - 26/10/12 05:12:54 INFO ResourceUtils: ==============================================================
+[2026-10-12T05:12:54.108+0000] {subprocess.py:106} INFO - 26/10/12 05:12:54 INFO SparkContext: Submitted application: verify-persisted-hdfs-records
+[2026-10-12T05:12:54.137+0000] {subprocess.py:106} INFO - 26/10/12 05:12:54 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 2, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2026-10-12T05:12:54.153+0000] {subprocess.py:106} INFO - 26/10/12 05:12:54 INFO ResourceProfile: Limiting resource is cpus at 2 tasks per executor
+[2026-10-12T05:12:54.154+0000] {subprocess.py:106} INFO - 26/10/12 05:12:54 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2026-10-12T05:12:54.211+0000] {subprocess.py:106} INFO - 26/10/12 05:12:54 INFO SecurityManager: Changing view acls to: ***
+[2026-10-12T05:12:54.212+0000] {subprocess.py:106} INFO - 26/10/12 05:12:54 INFO SecurityManager: Changing modify acls to: ***
+[2026-10-12T05:12:54.212+0000] {subprocess.py:106} INFO - 26/10/12 05:12:54 INFO SecurityManager: Changing view acls groups to:
+[2026-10-12T05:12:54.213+0000] {subprocess.py:106} INFO - 26/10/12 05:12:54 INFO SecurityManager: Changing modify acls groups to:
+[2026-10-12T05:12:54.213+0000] {subprocess.py:106} INFO - 26/10/12 05:12:54 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: ***; groups with view permissions: EMPTY; users with modify permissions: ***; groups with modify permissions: EMPTY
+[2026-10-12T05:12:54.508+0000] {subprocess.py:106} INFO - 26/10/12 05:12:54 INFO Utils: Successfully started service 'sparkDriver' on port 33785.
+[2026-10-12T05:12:54.547+0000] {subprocess.py:106} INFO - 26/10/12 05:12:54 INFO SparkEnv: Registering MapOutputTracker
+[2026-10-12T05:12:54.580+0000] {subprocess.py:106} INFO - 26/10/12 05:12:54 INFO SparkEnv: Registering BlockManagerMaster
+[2026-10-12T05:12:54.593+0000] {subprocess.py:106} INFO - 26/10/12 05:12:54 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2026-10-12T05:12:54.593+0000] {subprocess.py:106} INFO - 26/10/12 05:12:54 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2026-10-12T05:12:54.598+0000] {subprocess.py:106} INFO - 26/10/12 05:12:54 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2026-10-12T05:12:54.621+0000] {subprocess.py:106} INFO - 26/10/12 05:12:54 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-716aba80-a66e-4ca5-84f6-29b22594f8ba
+[2026-10-12T05:12:54.633+0000] {subprocess.py:106} INFO - 26/10/12 05:12:54 INFO MemoryStore: MemoryStore started with capacity 1048.8 MiB
+[2026-10-12T05:12:54.651+0000] {subprocess.py:106} INFO - 26/10/12 05:12:54 INFO SparkEnv: Registering OutputCommitCoordinator
+[2026-10-12T05:12:54.792+0000] {subprocess.py:106} INFO - 26/10/12 05:12:54 INFO JettyUtils: Start Jetty ***-scheduler:4040 for SparkUI
+[2026-10-12T05:12:54.896+0000] {subprocess.py:106} INFO - 26/10/12 05:12:54 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2026-10-12T05:12:55.079+0000] {subprocess.py:106} INFO - 26/10/12 05:12:55 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://spark-master:7077...
+[2026-10-12T05:12:55.125+0000] {subprocess.py:106} INFO - 26/10/12 05:12:55 INFO TransportClientFactory: Successfully created connection to spark-master/172.20.0.4:7077 after 24 ms (0 ms spent in bootstraps)
+[2026-10-12T05:12:55.204+0000] {subprocess.py:106} INFO - 26/10/12 05:12:55 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20261012051255-0011
+[2026-10-12T05:12:55.209+0000] {subprocess.py:106} INFO - 26/10/12 05:12:55 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20261012051255-0011/0 on worker-20261012035005-172.20.0.6-42549 (172.20.0.6:42549) with 2 core(s)
+[2026-10-12T05:12:55.218+0000] {subprocess.py:106} INFO - 26/10/12 05:12:55 INFO StandaloneSchedulerBackend: Granted executor ID app-20261012051255-0011/0 on hostPort 172.20.0.6:42549 with 2 core(s), 1024.0 MiB RAM
+[2026-10-12T05:12:55.220+0000] {subprocess.py:106} INFO - 26/10/12 05:12:55 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20261012051255-0011/1 on worker-20261012035005-172.20.0.2-46843 (172.20.0.2:46843) with 2 core(s)
+[2026-10-12T05:12:55.220+0000] {subprocess.py:106} INFO - 26/10/12 05:12:55 INFO StandaloneSchedulerBackend: Granted executor ID app-20261012051255-0011/1 on hostPort 172.20.0.2:46843 with 2 core(s), 1024.0 MiB RAM
+[2026-10-12T05:12:55.228+0000] {subprocess.py:106} INFO - 26/10/12 05:12:55 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 43549.
+[2026-10-12T05:12:55.229+0000] {subprocess.py:106} INFO - 26/10/12 05:12:55 INFO NettyBlockTransferService: Server created on ***-scheduler:43549
+[2026-10-12T05:12:55.233+0000] {subprocess.py:106} INFO - 26/10/12 05:12:55 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2026-10-12T05:12:55.240+0000] {subprocess.py:106} INFO - 26/10/12 05:12:55 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, ***-scheduler, 43549, None)
+[2026-10-12T05:12:55.252+0000] {subprocess.py:106} INFO - 26/10/12 05:12:55 INFO BlockManagerMasterEndpoint: Registering block manager ***-scheduler:43549 with 1048.8 MiB RAM, BlockManagerId(driver, ***-scheduler, 43549, None)
+[2026-10-12T05:12:55.258+0000] {subprocess.py:106} INFO - 26/10/12 05:12:55 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, ***-scheduler, 43549, None)
+[2026-10-12T05:12:55.262+0000] {subprocess.py:106} INFO - 26/10/12 05:12:55 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, ***-scheduler, 43549, None)
+[2026-10-12T05:12:55.291+0000] {subprocess.py:106} INFO - 26/10/12 05:12:55 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20261012051255-0011/0 is now RUNNING
+[2026-10-12T05:12:55.292+0000] {subprocess.py:106} INFO - 26/10/12 05:12:55 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20261012051255-0011/1 is now RUNNING
+[2026-10-12T05:12:55.700+0000] {subprocess.py:106} INFO - 26/10/12 05:12:55 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+[2026-10-12T05:13:18.293+0000] {subprocess.py:106} INFO - {"verification": "passed", "processed_rows": 1299873, "processed_unique_keys": 1299873, "platform_summary_total": 1299873, "streaming_rows": 1000, "streaming_unique_keys": 1000, "streaming_batches": 6, "batches_without_new_unique_events": 3, "source": "actual HDFS Parquet and streaming metrics"}
+[2026-10-12T05:13:45.792+0000] {subprocess.py:106} INFO - {"verified_utc": "2026-10-12T05:13:45.783750+00:00", "generation": "e590b4d3244f49ac86ff4de3aef266ea", "indexed_reviews": 1299873, "cube_cells_verified": 1910, "metrics_per_cell": 9, "all_spark_cube_counts_match_full_index": true}
+[2026-10-12T05:13:45.803+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-10-12T05:13:45.816+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-10-12T05:13:45.816+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=ecommerce_dissatisfaction_pipeline, task_id=09_verify_completion, run_id=validation_20261012, execution_date=20261011T200443, start_date=20261012T040009, end_date=20261012T051345

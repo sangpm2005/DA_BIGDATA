@@ -1,0 +1,59 @@
+26/10/11 19:56:51 INFO SparkContext: Running Spark version 3.5.7
+26/10/11 19:56:51 INFO SparkContext: OS info Linux, 6.6.114.1-microsoft-standard-WSL2, amd64
+26/10/11 19:56:51 INFO SparkContext: Java version 11.0.32.1
+26/10/11 19:56:51 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/11 19:56:51 INFO ResourceUtils: ==============================================================
+26/10/11 19:56:51 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/11 19:56:51 INFO ResourceUtils: ==============================================================
+26/10/11 19:56:51 INFO SparkContext: Submitted application: ecommerce-all
+26/10/11 19:56:51 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 2, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/11 19:56:51 INFO ResourceProfile: Limiting resource is cpus at 2 tasks per executor
+26/10/11 19:56:51 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/11 19:56:51 INFO SecurityManager: Changing view acls to: root
+26/10/11 19:56:51 INFO SecurityManager: Changing modify acls to: root
+26/10/11 19:56:51 INFO SecurityManager: Changing view acls groups to: 
+26/10/11 19:56:51 INFO SecurityManager: Changing modify acls groups to: 
+26/10/11 19:56:51 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root; groups with view permissions: EMPTY; users with modify permissions: root; groups with modify permissions: EMPTY
+26/10/11 19:56:51 INFO Utils: Successfully started service 'sparkDriver' on port 44829.
+26/10/11 19:56:51 INFO SparkEnv: Registering MapOutputTracker
+26/10/11 19:56:52 INFO SparkEnv: Registering BlockManagerMaster
+26/10/11 19:56:52 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/11 19:56:52 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/10/11 19:56:52 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/10/11 19:56:52 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-36195465-2a23-4858-8b3d-d4a2220883ea
+26/10/11 19:56:52 INFO MemoryStore: MemoryStore started with capacity 1048.8 MiB
+26/10/11 19:56:52 INFO SparkEnv: Registering OutputCommitCoordinator
+26/10/11 19:56:52 INFO JettyUtils: Start Jetty spark-client:4040 for SparkUI
+26/10/11 19:56:52 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/10/11 19:56:52 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://spark-master:7077...
+26/10/11 19:56:52 INFO TransportClientFactory: Successfully created connection to spark-master/172.20.0.3:7077 after 25 ms (0 ms spent in bootstraps)
+26/10/11 19:56:52 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20261011195652-0000
+26/10/11 19:56:52 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 35625.
+26/10/11 19:56:52 INFO NettyBlockTransferService: Server created on spark-client:35625
+26/10/11 19:56:52 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/10/11 19:56:52 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20261011195652-0000/0 on worker-20261011195303-172.20.0.5-35345 (172.20.0.5:35345) with 2 core(s)
+26/10/11 19:56:52 INFO StandaloneSchedulerBackend: Granted executor ID app-20261011195652-0000/0 on hostPort 172.20.0.5:35345 with 2 core(s), 1024.0 MiB RAM
+26/10/11 19:56:52 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20261011195652-0000/1 on worker-20261011195302-172.20.0.4-41153 (172.20.0.4:41153) with 2 core(s)
+26/10/11 19:56:52 INFO StandaloneSchedulerBackend: Granted executor ID app-20261011195652-0000/1 on hostPort 172.20.0.4:41153 with 2 core(s), 1024.0 MiB RAM
+26/10/11 19:56:52 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, spark-client, 35625, None)
+26/10/11 19:56:52 INFO BlockManagerMasterEndpoint: Registering block manager spark-client:35625 with 1048.8 MiB RAM, BlockManagerId(driver, spark-client, 35625, None)
+26/10/11 19:56:52 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, spark-client, 35625, None)
+26/10/11 19:56:52 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, spark-client, 35625, None)
+26/10/11 19:56:53 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20261011195652-0000/0 is now RUNNING
+26/10/11 19:56:53 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20261011195652-0000/1 is now RUNNING
+26/10/11 19:56:53 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+{"raw_rows": 1300086, "input": "hdfs://namenode:9000/ecommerce/raw/reviews.csv", "reader_partitions": 1, "schema": {"type": "struct", "fields": [{"name": "csv_index", "type": "string", "nullable": true, "metadata": {}}, {"name": "reviewid", "type": "string", "nullable": true, "metadata": {}}, {"name": "username", "type": "string", "nullable": true, "metadata": {}}, {"name": "userimage", "type": "string", "nullable": true, "metadata": {}}, {"name": "content", "type": "string", "nullable": true, "metadata": {}}, {"name": "score", "type": "string", "nullable": true, "metadata": {}}, {"name": "thumbsupcount", "type": "string", "nullable": true, "metadata": {}}, {"name": "reviewcreatedversion", "type": "string", "nullable": true, "metadata": {}}, {"name": "at", "type": "string", "nullable": true, "metadata": {}}, {"name": "replycontent", "type": "string", "nullable": true, "metadata": {}}, {"name": "repliedat", "type": "string", "nullable": true, "metadata": {}}, {"name": "appid", "type": "string", "nullable": true, "metadata": {}}, {"name": "_corrupt_record", "type": "string", "nullable": true, "metadata": {}}]}, "multiline": true, "spark_version": "3.5.7", "source_sha256": "9d333c550cb141aa0f3e9f12af43e8e407809031b073b046b61607f84b39bdf9", "audit_rows_match": true}
+{"raw_rows": 1300086, "quarantined_rows": 74, "clean_rows": 1299873, "duplicate_valid_id_rows_removed": 139, "row_balance_ok": true, "validation_reason_counts": {"missing_content": 72, "invalid_score": 2}, "text_repetition_policy": "keep distinct review IDs", "output_partitions": 8, "partition_columns": ["platform", "year"]}
+Spark SQL tables saved to HDFS
+26/10/11 20:00:22 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.JNIBLAS
+26/10/11 20:00:34 WARN DAGScheduler: Broadcasting large task binary with size 1048.3 KiB
+26/10/11 20:00:34 WARN DAGScheduler: Broadcasting large task binary with size 1048.5 KiB
+26/10/11 20:00:35 WARN DAGScheduler: Broadcasting large task binary with size 1055.6 KiB
+26/10/11 20:00:37 WARN DAGScheduler: Broadcasting large task binary with size 1065.2 KiB
+26/10/11 20:00:37 WARN DAGScheduler: Broadcasting large task binary with size 1071.3 KiB
+26/10/11 20:00:38 WARN DAGScheduler: Broadcasting large task binary with size 1064.4 KiB
+26/10/11 20:00:38 WARN DAGScheduler: Broadcasting large task binary with size 1080.5 KiB
+26/10/11 20:00:42 WARN DAGScheduler: Broadcasting large task binary with size 1259.9 KiB
+26/10/11 20:00:43 WARN DAGScheduler: Broadcasting large task binary with size 1066.8 KiB
+26/10/11 20:00:44 WARN DAGScheduler: Broadcasting large task binary with size 1075.8 KiB
+{"training_rows": 61241, "silhouette": 0.022145331918785965}

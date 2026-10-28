@@ -346,6 +346,12 @@
       "bytes": 163,
       "sha256": "dffed1f7af2081eb0838c99f354b42797deca37c01be9c52bb42ef1e59f3e244",
       "redacted_or_aggregated": false
+    },
+    {
+      "path": "local_checks_20261028.json",
+      "bytes": 440,
+      "sha256": "f2bfa5b185eedd05ebf7898505befe2ea1414ba8998a333a5c791fa0c09347fe",
+      "redacted_or_aggregated": false
     }
   ]
 }

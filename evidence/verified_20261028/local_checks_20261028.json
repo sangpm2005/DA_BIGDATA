@@ -1,0 +1,15 @@
+{
+  "checked_date": "2026-10-28",
+  "environment": "Bundled Python on Windows; no Spark/Docker execution in this check",
+  "tests_ran": 11,
+  "modules": [
+    "test_text",
+    "test_io",
+    "test_dashboard"
+  ],
+  "failures": 0,
+  "errors": 0,
+  "python_sources_ast_parsed": true,
+  "compose_config_valid": true,
+  "scope": "Current source validation and local logic tests; historical Spark checks remain dated separately."
+}

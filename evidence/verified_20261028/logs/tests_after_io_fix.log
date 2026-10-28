@@ -1,0 +1,40 @@
+test_failed_write_keeps_previous_artifact_and_cleans_temporary_file (test_io.ArtifactIOTests.test_failed_write_keeps_previous_artifact_and_cleans_temporary_file) ... ok
+test_replaces_existing_unicode_artifact (test_io.ArtifactIOTests.test_replaces_existing_unicode_artifact) ... ok
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/10/12 03:52:24 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+test_csv_quoted_newline_quotes_and_comma (test_spark_logic.SparkLogicTests.test_csv_quoted_newline_quotes_and_comma) ... 
+[Stage 0:>                                                          (0 + 1) / 1]
+
+                                                                                
+/usr/local/lib/python3.11/socket.py:789: ResourceWarning: unclosed <socket.socket fd=7, family=2, type=1, proto=6, laddr=('127.0.0.1', 38528), raddr=('127.0.0.1', 46079)>
+  self._sock = None
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_quarantine_dedup_and_keep_distinct_identical_text (test_spark_logic.SparkLogicTests.test_quarantine_dedup_and_keep_distinct_identical_text) ... 
+[Stage 1:>                                                          (0 + 2) / 2]
+
+[Stage 1:===========================================================(2 + 0) / 2]
+
+                                                                                
+/usr/local/lib/python3.11/socket.py:789: ResourceWarning: unclosed <socket.socket fd=8, family=2, type=1, proto=6, laddr=('127.0.0.1', 58700), raddr=('127.0.0.1', 35211)>
+  self._sock = None
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+
+[Stage 2:>                                                          (0 + 2) / 2]
+
+[Stage 4:>                                                          (0 + 1) / 1]
+
+                                                                                
+/usr/local/lib/python3.11/socket.py:789: ResourceWarning: unclosed <socket.socket fd=8, family=2, type=1, proto=6, laddr=('127.0.0.1', 55444), raddr=('127.0.0.1', 46021)>
+  self._sock = None
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_canonicalizes_combining_marks_and_styled_characters (test_text.TextTests.test_canonicalizes_combining_marks_and_styled_characters) ... ok
+test_preserves_negation_and_accents (test_text.TextTests.test_preserves_negation_and_accents) ... ok
+test_removes_invisible_separators (test_text.TextTests.test_removes_invisible_separators) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 35.016s
+
+OK
