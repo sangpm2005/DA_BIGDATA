@@ -1,0 +1,12 @@
+{
+  "folders": [{"name": "HuynhQuangSang", "path": "."}],
+  "settings": {
+    "editor.fontSize": 18,
+    "editor.lineNumbers": "on",
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "on",
+    "workbench.editor.enablePreview": false,
+    "workbench.startupEditor": "none",
+    "terminal.integrated.fontSize": 17
+  }
+}

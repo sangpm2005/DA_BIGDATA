@@ -1,0 +1,26 @@
+== Parsed Logical Plan ==
+'Aggregate ['platform, 'month], ['platform, 'month, unresolvedalias('count(1), None)]
++- 'Filter (('platform = Shopee) AND ('year = 2022))
+   +- 'UnresolvedRelation [reviews], [], false
+
+== Analyzed Logical Plan ==
+platform: string, month: string, count(1): bigint
+Aggregate [platform#9, month#5], [platform#9, month#5, count(1) AS count(1)#269L]
++- Filter ((platform#9 = Shopee) AND (year#10 = 2022))
+   +- SubqueryAlias reviews
+      +- View (`reviews`, [review_key#0,content#1,normalized_content#2,score#3,at#4,month#5,low_rating_proxy#6,spam_candidate#7,aspects_mentioned#8,platform#9,year#10])
+         +- Relation [review_key#0,content#1,normalized_content#2,score#3,at#4,month#5,low_rating_proxy#6,spam_candidate#7,aspects_mentioned#8,platform#9,year#10] parquet
+
+== Optimized Logical Plan ==
+Aggregate [platform#9, month#5], [platform#9, month#5, count(1) AS count(1)#269L]
++- Project [month#5, platform#9]
+   +- Filter ((isnotnull(platform#9) AND isnotnull(year#10)) AND ((platform#9 = Shopee) AND (year#10 = 2022)))
+      +- Relation [review_key#0,content#1,normalized_content#2,score#3,at#4,month#5,low_rating_proxy#6,spam_candidate#7,aspects_mentioned#8,platform#9,year#10] parquet
+
+== Physical Plan ==
+AdaptiveSparkPlan isFinalPlan=false
++- HashAggregate(keys=[platform#9, month#5], functions=[count(1)], output=[platform#9, month#5, count(1)#269L])
+   +- Exchange hashpartitioning(platform#9, month#5, 8), ENSURE_REQUIREMENTS, [plan_id=1021]
+      +- HashAggregate(keys=[platform#9, month#5], functions=[partial_count(1)], output=[platform#9, month#5, count#274L])
+         +- Project [month#5, platform#9]
+            +- FileScan parquet [month#5,platform#9,year#10] Batched: true, DataFilters: [], Format: Parquet, Location: InMemoryFileIndex(1 paths)[hdfs://namenode:9000/ecommerce/processed/reviews], PartitionFilters: [isnotnull(platform#9), isnotnull(year#10), (platform#9 = Shopee), (year#10 = 2022)], PushedFilters: [], ReadSchema: struct<month:string>

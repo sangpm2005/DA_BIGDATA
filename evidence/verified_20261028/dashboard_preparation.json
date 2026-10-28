@@ -1,0 +1,48 @@
+{
+  "generation": "3803e26d88584384995a5fdbcf9fa37a",
+  "prepared_utc": "2026-10-15T08:53:04.403202+00:00",
+  "processed_rows": 1299873,
+  "cube_rows": 1910,
+  "source_sha256": "9d333c550cb141aa0f3e9f12af43e8e407809031b073b046b61607f84b39bdf9",
+  "aspect_config_sha256": "246ae3ad10c0b9724624b147ee95c9d5100dfa6ecb33d03df639dadce750ab02",
+  "month_min": "2013-06",
+  "month_max": "2022-08",
+  "aspects": [
+    {
+      "code": "app",
+      "label": "Ứng dụng",
+      "bit": 1
+    },
+    {
+      "code": "delivery",
+      "label": "Vận chuyển",
+      "bit": 2
+    },
+    {
+      "code": "payment",
+      "label": "Thanh toán",
+      "bit": 4
+    },
+    {
+      "code": "product",
+      "label": "Sản phẩm",
+      "bit": 8
+    },
+    {
+      "code": "promotion",
+      "label": "Giá và khuyến mãi",
+      "bit": 16
+    },
+    {
+      "code": "returns",
+      "label": "Đổi trả và hoàn tiền",
+      "bit": 32
+    },
+    {
+      "code": "support",
+      "label": "Chăm sóc khách hàng",
+      "bit": 64
+    }
+  ],
+  "hdfs_serving_source": "hdfs://namenode:9000/ecommerce/serving/review_index"
+}

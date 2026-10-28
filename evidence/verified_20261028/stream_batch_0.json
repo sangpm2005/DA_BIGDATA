@@ -1,0 +1,8 @@
+{
+  "batch_id": 0,
+  "new_unique_events": 499,
+  "valid": 499,
+  "invalid": 0,
+  "source_mode": "historical_replay",
+  "checkpoint": "hdfs://namenode:9000/ecommerce/checkpoints/reviews-v1"
+}

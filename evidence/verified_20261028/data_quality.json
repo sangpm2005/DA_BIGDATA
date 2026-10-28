@@ -1,0 +1,17 @@
+{
+  "raw_rows": 1300086,
+  "quarantined_rows": 74,
+  "clean_rows": 1299873,
+  "duplicate_valid_id_rows_removed": 139,
+  "row_balance_ok": true,
+  "validation_reason_counts": {
+    "missing_content": 72,
+    "invalid_score": 2
+  },
+  "text_repetition_policy": "keep distinct review IDs",
+  "output_partitions": 8,
+  "partition_columns": [
+    "platform",
+    "year"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "completed_utc": "2026-10-15T08:52:19.034272+00:00",
+  "exported_tables": [
+    "platform_summary",
+    "monthly_summary",
+    "rating_distribution",
+    "aspect_mentions",
+    "unmatched_low_ratings",
+    "spam_sensitivity"
+  ],
+  "aspect_method": "keyword mentions in low-rated reviews; not validated aspect polarity"
+}

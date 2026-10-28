@@ -1,0 +1,11 @@
+{
+  "verification": "passed",
+  "processed_rows": 1299873,
+  "processed_unique_keys": 1299873,
+  "platform_summary_total": 1299873,
+  "streaming_rows": 1000,
+  "streaming_unique_keys": 1000,
+  "streaming_batches": 12,
+  "batches_without_new_unique_events": 9,
+  "source": "actual HDFS Parquet and streaming metrics"
+}

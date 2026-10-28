@@ -1,0 +1,2 @@
+# Optional: used only to render report figures from the small Spark cube.
+matplotlib==3.10.7

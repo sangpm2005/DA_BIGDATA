@@ -1,0 +1,181 @@
+{
+  "k": 8,
+  "seed": 42,
+  "distance": "cosine",
+  "training_rows": 61241,
+  "sample_percent": 25,
+  "silhouette_sample_max": 10000,
+  "silhouette_cosine": 0.02000751037862234,
+  "tokenization": "Vietnamese syllable unigrams/bigrams",
+  "clusters": [
+    {
+      "cluster": 0,
+      "top_terms": [
+        "ứng",
+        "ứng dụng",
+        "dụng",
+        "lag",
+        "như",
+        "càng",
+        "tệ",
+        "app",
+        "chậm",
+        "cc",
+        "như cc",
+        "cập",
+        "ngày càng",
+        "nhật",
+        "cập nhật"
+      ],
+      "human_label": "unassigned"
+    },
+    {
+      "cluster": 1,
+      "top_terms": [
+        "cáo",
+        "quảng",
+        "quảng cáo",
+        "cáo nhiều",
+        "nhiều",
+        "phiền",
+        "cáo hoài",
+        "hoài",
+        "cc",
+        "quản cáo",
+        "lắm",
+        "làm phiền",
+        "mày",
+        "quản",
+        "cáo cc"
+      ],
+      "human_label": "unassigned"
+    },
+    {
+      "cluster": 2,
+      "top_terms": [
+        "ship",
+        "phí",
+        "cao",
+        "lừa",
+        "đảo",
+        "lừa đảo",
+        "phí ship",
+        "ship cao",
+        "đắt",
+        "tiền",
+        "tiền ship",
+        "vận",
+        "vận chuyển",
+        "chuyển",
+        "phí vận"
+      ],
+      "human_label": "unassigned"
+    },
+    {
+      "cluster": 3,
+      "top_terms": [
+        "hang",
+        "ma",
+        "con",
+        "dung",
+        "khong",
+        "co",
+        "toi",
+        "quang",
+        "lam",
+        "duoc",
+        "thi",
+        "nhu",
+        "quang cao",
+        "ban",
+        "la"
+      ],
+      "human_label": "unassigned"
+    },
+    {
+      "cluster": 4,
+      "top_terms": [
+        "ko",
+        "đc",
+        "sao",
+        "tải",
+        "mua",
+        "hàng",
+        "đặt",
+        "ko đc",
+        "lại",
+        "cái",
+        "cứ",
+        "về",
+        "app",
+        "giá",
+        "ra"
+      ],
+      "human_label": "unassigned"
+    },
+    {
+      "cluster": 5,
+      "top_terms": [
+        "hàng",
+        "giao",
+        "giao hàng",
+        "đơn",
+        "đặt",
+        "không",
+        "hủy",
+        "khách",
+        "lâu",
+        "đơn hàng",
+        "đặt hàng",
+        "chậm",
+        "trả",
+        "nhận",
+        "ngày"
+      ],
+      "human_label": "unassigned"
+    },
+    {
+      "cluster": 6,
+      "top_terms": [
+        "không",
+        "đăng",
+        "nhập",
+        "đăng nhập",
+        "toán",
+        "thanh",
+        "thanh toán",
+        "khoản",
+        "tài",
+        "tài khoản",
+        "mã",
+        "mua",
+        "làm",
+        "shopee",
+        "gì"
+      ],
+      "human_label": "unassigned"
+    },
+    {
+      "cluster": 7,
+      "top_terms": [
+        "lỗi",
+        "lượng",
+        "chất",
+        "chất lượng",
+        "sản",
+        "phẩm",
+        "sản phẩm",
+        "kém",
+        "bị",
+        "bán",
+        "hàng",
+        "bị lỗi",
+        "toàn",
+        "kém chất",
+        "hàng kém"
+      ],
+      "human_label": "unassigned"
+    }
+  ],
+  "interpretation": "Exploratory clusters; not aspect classification accuracy or causal proof."
+}

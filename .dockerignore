@@ -1,0 +1,12 @@
+.git
+.venv
+__pycache__
+artifacts
+outputs
+logs
+data
+*.csv
+*.parquet
+*.log
+models
+

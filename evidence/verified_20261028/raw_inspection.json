@@ -1,0 +1,92 @@
+{
+  "raw_rows": 1300086,
+  "input": "hdfs://namenode:9000/ecommerce/raw/reviews.csv",
+  "reader_partitions": 1,
+  "schema": {
+    "type": "struct",
+    "fields": [
+      {
+        "name": "csv_index",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "reviewid",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "username",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "userimage",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "content",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "score",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "thumbsupcount",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "reviewcreatedversion",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "at",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "replycontent",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "repliedat",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "appid",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "_corrupt_record",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      }
+    ]
+  },
+  "multiline": true,
+  "spark_version": "3.5.7",
+  "source_sha256": "9d333c550cb141aa0f3e9f12af43e8e407809031b073b046b61607f84b39bdf9",
+  "audit_rows_match": true
+}

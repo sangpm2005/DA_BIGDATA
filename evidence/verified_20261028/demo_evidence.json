@@ -1,0 +1,87 @@
+{
+  "airflow": {
+    "run_id": "validation_20261012",
+    "state": "success",
+    "tasks": [
+      {
+        "task_id": "01_prepare_hdfs",
+        "state": "success",
+        "start_utc": "2026-10-11T20:04:43.981059+00:00",
+        "end_utc": "2026-10-11T20:04:47.648591+00:00"
+      },
+      {
+        "task_id": "02_upload_csv",
+        "state": "success",
+        "start_utc": "2026-10-11T20:04:47.926452+00:00",
+        "end_utc": "2026-10-11T20:05:00.979734+00:00"
+      },
+      {
+        "task_id": "03_read_with_spark",
+        "state": "success",
+        "start_utc": "2026-10-12T03:52:23.458520+00:00",
+        "end_utc": "2026-10-12T03:53:15.716958+00:00"
+      },
+      {
+        "task_id": "04_clean_to_parquet",
+        "state": "success",
+        "start_utc": "2026-10-12T03:53:16.784180+00:00",
+        "end_utc": "2026-10-12T03:55:17.069173+00:00"
+      },
+      {
+        "task_id": "05_spark_sql",
+        "state": "success",
+        "start_utc": "2026-10-12T03:55:17.524079+00:00",
+        "end_utc": "2026-10-12T03:56:17.221123+00:00"
+      },
+      {
+        "task_id": "06_review_aspects_and_kmeans",
+        "state": "success",
+        "start_utc": "2026-10-12T03:56:18.066227+00:00",
+        "end_utc": "2026-10-12T03:58:03.559333+00:00"
+      },
+      {
+        "task_id": "07_save_results",
+        "state": "success",
+        "start_utc": "2026-10-12T03:58:04.149502+00:00",
+        "end_utc": "2026-10-12T03:58:39.245555+00:00"
+      },
+      {
+        "task_id": "08_kafka_replay_and_stream",
+        "state": "success",
+        "start_utc": "2026-10-12T03:58:39.808556+00:00",
+        "end_utc": "2026-10-12T04:00:08.669990+00:00"
+      },
+      {
+        "task_id": "09_verify_completion",
+        "state": "success",
+        "start_utc": "2026-10-12T04:00:09.801370+00:00",
+        "end_utc": "2026-10-12T04:00:51.214985+00:00"
+      }
+    ]
+  },
+  "spark_alive_workers": 2,
+  "spark_total_cores": 4,
+  "kafka_topic_end_offsets": {
+    "0": 662,
+    "1": 698,
+    "2": 640
+  },
+  "kafka_total_offsets": 2000,
+  "repeated_batch_counts_unchanged": {
+    "raw_rows": true,
+    "clean_rows": true,
+    "quarantined_rows": true,
+    "duplicate_valid_id_rows_removed": true
+  },
+  "persisted_validation": {
+    "verification": "passed",
+    "processed_rows": 1299873,
+    "processed_unique_keys": 1299873,
+    "platform_summary_total": 1299873,
+    "streaming_rows": 1000,
+    "streaming_unique_keys": 1000,
+    "streaming_batches": 6,
+    "batches_without_new_unique_events": 3,
+    "source": "actual HDFS Parquet and streaming metrics"
+  }
+}
