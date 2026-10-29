@@ -13,6 +13,7 @@ Môn Bigdata, giảng viên TS. Huỳnh Thái Học. Nhóm gồm Huỳnh Quang S
 | 15/10/2026 | Sửa kiểm tra Docker trên Windows PowerShell 5.1 khi Start-Process trả ExitCode null | scripts/Prepare-5MinDemo.ps1 và engine_probe.json đã chọn |
 | 15/10/2026 | Đối soát HDFS và snapshot bổ sung, cùng tổng review và generation sản phẩm | persisted_validation.json, dashboard_validation.json, dashboard_preparation.json |
 | 28/10/2026 | Chuẩn bị hồ sơ nộp PDF, tạo Git và loại mật khẩu khỏi cấu hình công khai | README, .env.example, Init-LocalConfig.ps1 và các commit từ ngày khởi tạo |
+| 29/10/2026 | Đưa mã nguồn, output, log và ảnh vào hồ sơ kiểm chứng đầu PDF; thêm chỉ dẫn và kiểm tra tính toàn vẹn artifact | docs/EVIDENCE_GUIDE.md, scripts/check_submission_evidence.py, evidence/audit_20261029.json và PDF bản bổ sung. Không chạy lại toàn pipeline trong lần chỉnh báo cáo này. |
 
 Tên file minh chứng ở trên được lưu trong `evidence/verified_20261028/` theo cùng cấu trúc. Ngày thư mục là ngày chọn và đóng gói bằng chứng; thời điểm thực thi nằm trong chính log/metadata. Có 13 tests đã đạt trong container ở lần kiểm chứng trước; ngày đóng gói chạy lại 11 tests text/IO/dashboard bằng Python tại máy, không coi là chạy lại tests Spark hoặc toàn pipeline.
 

@@ -1,0 +1,25 @@
+﻿Kính gửi TS. Huỳnh Thái Học,
+
+Nhóm nộp bản báo cáo cuối kỳ môn Bigdata đã bổ sung minh chứng thực thi cho đề tài “Phát hiện các khía cạnh gây không hài lòng của khách hàng từ dữ liệu phản hồi trên các sàn thương mại điện tử tại Việt Nam”.
+
+Thành viên: 2001230757 - Huỳnh Quang Sang - 14DHTH13; 2001230915 - Phan Đức Thể - 14DHTH13; 2001231033 - Đỗ Trọng Vĩ - 14DHTH06.
+
+PDF đính kèm gồm 63 trang. Hồ sơ kiểm chứng đặt ngay sau hai bìa, tại trang PDF 3-12 (đếm từ bìa là trang 1):
+- Trang 3: ma trận yêu cầu và chỉ dẫn minh chứng.
+- Trang 4: mã tạo vùng/upload HDFS và trích log fsck HEALTHY, 5 block, file 642.967.981 byte.
+- Trang 5-6: mã Spark đọc CSV từ HDFS, ghi Parquet, output làm sạch, truy vấn SQL, bảng kết quả và physical plan.
+- Trang 7-8: biểu đồ, insight, độ bao phủ khía cạnh và metric K-Means.
+- Trang 9: mã checkpoint/dedup, offset, microbatch và đối soát HDFS streaming.
+- Trang 10: mã DAG, trạng thái 9/9 task success và trích log thực thi.
+- Trang 11: ảnh ReviewLens và đối soát nguồn số liệu từ cube Spark sang chỉ mục tra cứu.
+- Trang 12: lệnh tái lập, README, nhật ký lỗi và lịch sử commit.
+
+Repository mã nguồn công khai:
+https://github.com/sangpm2005/DA_BIGDATA
+
+Chỉ dẫn kiểm chứng trực tiếp mã nguồn, log, output và ảnh:
+https://github.com/sangpm2005/DA_BIGDATA/blob/main/docs/EVIDENCE_GUIDE.md
+
+Source và log được dẫn bằng link trong PDF; các artifact chọn lọc nằm ở evidence/verified_20261028/. Có thể kiểm tra nhanh bằng: py -3.11 scripts/check_submission_evidence.py.
+
+Mốc thực nghiệm chính là 12/10, đối soát bổ sung là 15/10; ngày 29/10 là lần bổ sung trình bày minh chứng, không phải ngày chạy lại toàn pipeline. Git khởi tạo ngày 28/10 và không có commit hồi tố. Nhóm chọn hướng phân tích dữ liệu có số liệu, bảng, biểu đồ và insight; K-Means là khám phá bổ sung, chưa có tập nhãn độc lập để đánh giá phân loại khía cạnh.

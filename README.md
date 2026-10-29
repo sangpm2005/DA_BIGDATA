@@ -2,6 +2,8 @@
 
 Repository nộp môn Bigdata: https://github.com/sangpm2005/DA_BIGDATA
 
+**Bản cuối kỳ bổ sung minh chứng ngày 29/10/2026:** [PDF](docs/submission/20261029/Bao_cao_cuoi_ky_Bigdata_bo_sung_minh_chung.pdf) và [chỉ dẫn kiểm chứng theo từng tiêu chí](docs/EVIDENCE_GUIDE.md). Hồ sơ ở trang PDF 3-12 có mã nguồn, output, log và ảnh ReviewLens ngay trong tài liệu. Có thể kiểm tra nhanh các artifact đã lưu bằng `py -3.11 scripts/check_submission_evidence.py`; lệnh này không chạy lại pipeline.
+
 Nhóm: **2001230757 - Huỳnh Quang Sang - 14DHTH13**, **2001230915 - Phan Đức Thể - 14DHTH13**, **2001231033 - Đỗ Trọng Vĩ - 14DHTH06**. Giảng viên: **TS. Huỳnh Thái Học**.
 
 Hai báo cáo PDF và mô tả nộp bài nằm trong [`docs/submission/`](docs/submission/). Minh chứng chọn lọc cùng manifest SHA-256 ở [`evidence/verified_20261028/`](evidence/verified_20261028/). Xem [nhật ký và phân công năm tuần](docs/WORK_LOG.md) để phân biệt kế hoạch nhóm với các mốc có log thực tế.

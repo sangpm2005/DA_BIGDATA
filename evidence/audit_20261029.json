@@ -1,0 +1,128 @@
+{
+  "checked_utc": "2026-10-29T03:11:06.096335+00:00",
+  "scope": "stored evidence integrity and cross-artifact consistency only",
+  "full_pipeline_rerun": false,
+  "passed": true,
+  "checks": [
+    {
+      "check": "manifest_sha256",
+      "passed": true,
+      "detail": {
+        "files": 50,
+        "mismatched_or_missing": []
+      }
+    },
+    {
+      "check": "spark_hdfs_input",
+      "passed": true,
+      "detail": {
+        "input": "hdfs://namenode:9000/ecommerce/raw/reviews.csv",
+        "rows": 1300086,
+        "reader_partitions": 1
+      }
+    },
+    {
+      "check": "clean_row_balance",
+      "passed": true,
+      "detail": {
+        "raw_rows": 1300086,
+        "quarantined_rows": 74,
+        "clean_rows": 1299873,
+        "duplicate_valid_id_rows_removed": 139,
+        "row_balance_ok": true,
+        "validation_reason_counts": {
+          "missing_content": 72,
+          "invalid_score": 2
+        },
+        "text_repetition_policy": "keep distinct review IDs",
+        "output_partitions": 8,
+        "partition_columns": [
+          "platform",
+          "year"
+        ]
+      }
+    },
+    {
+      "check": "sql_platform_totals",
+      "passed": true,
+      "detail": {
+        "reviews": 1299873,
+        "low_rated_reviews": 282772
+      }
+    },
+    {
+      "check": "hdfs_fsck_log",
+      "passed": true,
+      "detail": "Stored fsck log; execution date is inside the log"
+    },
+    {
+      "check": "spark_sql_plan",
+      "passed": true,
+      "detail": "Stored plan shows shuffle, partition filters and column projection"
+    },
+    {
+      "check": "airflow_recorded_run",
+      "passed": true,
+      "detail": {
+        "run_id": "validation_20261012",
+        "successful_tasks": 9
+      }
+    },
+    {
+      "check": "airflow_extended_task_log",
+      "passed": true,
+      "detail": "Extended task 09 has its own log, separate from the original run record"
+    },
+    {
+      "check": "kafka_original_replay",
+      "passed": true,
+      "detail": {
+        "new_unique_events": [
+          499,
+          498,
+          3,
+          0,
+          0,
+          0
+        ],
+        "partition_end_offsets": {
+          "0": 662,
+          "1": 698,
+          "2": 640
+        }
+      }
+    },
+    {
+      "check": "persisted_hdfs_counts",
+      "passed": true,
+      "detail": {
+        "verification": "passed",
+        "processed_rows": 1299873,
+        "processed_unique_keys": 1299873,
+        "platform_summary_total": 1299873,
+        "streaming_rows": 1000,
+        "streaming_unique_keys": 1000,
+        "streaming_batches": 12,
+        "batches_without_new_unique_events": 9,
+        "source": "actual HDFS Parquet and streaming metrics"
+      }
+    },
+    {
+      "check": "dashboard_snapshot_audit",
+      "passed": true,
+      "detail": {
+        "verified_utc": "2026-10-15T08:59:21.421958+00:00",
+        "generation": "3803e26d88584384995a5fdbcf9fa37a",
+        "indexed_reviews": 1299873,
+        "cube_cells_verified": 1910,
+        "metrics_per_cell": 9,
+        "all_spark_cube_counts_match_full_index": true
+      }
+    },
+    {
+      "check": "dashboard_images",
+      "passed": true,
+      "detail": "Historical product images, not a live availability check"
+    }
+  ]
+}
